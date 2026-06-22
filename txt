@@ -1,0 +1,18 @@
+GET - Obtener todos los productos
+Request
+GET http://localhost:8080/api/productos
+Headers
+Content-Type: application/json
+📌 GET - Obtener producto por ID
+Request
+GET http://localhost:8080/api/productos/1
+📌 POST - Crear producto
+Request
+POST http://localhost:8080/api/productos
+Body (raw → JSON)
+{
+    "nombre": "Laptop Gamer",
+    "descripcion": "Laptop RTX 4060",
+    "precio": 25000.00,
+    "stock": 15
+}
