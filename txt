@@ -1,4 +1,8 @@
-GET - Obtener todos los productos
+http://localhost:8080
+
+y tienes una entidad como Producto, estos serían ejemplos para usar en Postman.
+
+📌 GET - Obtener todos los productos
 Request
 GET http://localhost:8080/api/productos
 Headers
@@ -15,4 +19,60 @@ Body (raw → JSON)
     "descripcion": "Laptop RTX 4060",
     "precio": 25000.00,
     "stock": 15
+}
+📌 PUT - Actualizar producto
+Request
+PUT http://localhost:8080/api/productos/1
+Body
+{
+    "nombre": "Laptop Gamer Pro",
+    "descripcion": "Laptop RTX 4070",
+    "precio": 30000.00,
+    "stock": 10
+}
+📌 DELETE - Eliminar producto
+Request
+DELETE http://localhost:8080/api/productos/1
+📌 POST - Login (Spring Security + JWT)
+Request
+POST http://localhost:8080/api/auth/login
+Body
+{
+    "email": "admin@gmail.com",
+    "password": "123456"
+}
+Respuesta
+{
+    "token": "eyJhbGciOiJIUzI1NiIs..."
+}
+📌 GET con Token JWT
+Headers
+Authorization: Bearer eyJhbGciOiJIUzI1NiIs...
+Request
+GET http://localhost:8080/api/productos
+📌 Collection de Postman (JSON)
+
+Puedes importar esto directamente:
+
+{
+  "info": {
+    "name": "Spring Boot API",
+    "_postman_id": "12345",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Obtener Productos",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://localhost:8080/api/productos",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["api", "productos"]
+        }
+      }
+    }
+  ]
 }
