@@ -1,10 +1,6 @@
 
 
-📌 GET - Obtener todos los productos
-Request
-GET http://localhost:8080/api/productos
-Headers
-Content-Type: application/json
+
 📌 GET - Obtener producto por ID
 Request
 GET http://localhost:8080/api/productos/1
